@@ -1,9 +1,7 @@
 node {
   if (env.GITHUB_REF != 'refs/heads/master') {
     checkoutSource()
-    setenv()
-    build()
-    Test()
+    TestSh()
   }
 }
 
@@ -14,21 +12,28 @@ def checkoutSource() {
   }
 }
 
-def setenv(){
+
+def setenvGo(){
   stage('prepare'){
     sh("sudo add-apt-repository ppa:longsleep/golang-backports; sudo apt update; sudo apt install golang-go")
   }
 }
 
-def build () {
+def buildGo () {
   stage ('Build') {
     sh('#!/bin/sh -e\n go fmt; go vet; go build')
   }
 }
 
 
-def Test() {
+def TestGo() {
   stage ('Unit tests') {
     sh('#!/bin/sh -e\n go test')
+  }
+}
+
+def TestSh(){
+  stage ('Unit tests') {
+    sh("./test.sh")
   }
 }
