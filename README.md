@@ -27,3 +27,6 @@ Test pass!
 Test Negative result
 >./test.sh
 exit 1
+
+
+![Jenkins single-shot master](https://github.com/zdtsw/hellowen/workflows/Jenkins%20single-shot%20master/badge.svg?branch=master)
