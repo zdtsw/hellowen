@@ -9,7 +9,7 @@ node {
 
 def checkoutSource() {
   stage ('checkout') {
-    sh('#!/bin/sh -e\n cp -r /github/workspace/* $WORKSPACE")
+    sh('#!/bin/sh -e\n cp -r /github/workspace/* $WORKSPACE')
   }
 }
 
