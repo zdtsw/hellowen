@@ -17,6 +17,7 @@ def checkoutSource() {
 def setenv(){
   stage('prepare'){
     sh("sudo add-apt-repository ppa:longsleep/golang-backports; sudo apt update; sudo apt install golang-go")
+  }
 }
 
 def build () {
