@@ -17,8 +17,9 @@ Test
 
 
 
-# Due to current v2.0 image from jenkinsci does only support mvn build, and I do not have sudo to install go package.
-# Change projec to a much simple solution: bash which support by ubuntu for sure
+# Due to current v0.2 image from jenkinsci does only support mvn build, 
+# User for image do not grant sudo to install go package.
+# Change projec to a even more simple solution: bash kinda hello Wen
 Test Positive result
 > ./test.sh
 hello Wen
